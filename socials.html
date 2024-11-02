@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark-theme" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasha Yelisieiev - Socials</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <style>
+        :root {
+            --highlight-color: #86c9ff;
+            --bs-gray-100: #f8f9fa;
+            --bs-gray-200: #e9ecef;
+            --bs-gray-300: #dee2e6;
+            --bs-gray-400: #ced4da;
+            --bs-gray-500: #adb5bd;
+            --bs-gray-600: #6c757d;
+            --bs-gray-700: #495057;
+            --bs-gray-800: #343a40;
+            --bs-gray-900: #212529;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            font-family: monospace, sans-serif !important;
+            color: #fff;
+        }
+
+        body {
+            background-color: #0A0A0A;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-top: 56px;
+        }
+
+        nav {
+            background-color: #0A0A0A;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            font-family: monospace;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            display: none;
+        }
+
+        .navbar-toggler::before {
+            content: "[+]";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .navbar-toggler[aria-expanded="true"]::before {
+            content: "[-]";
+        }
+
+        .socials-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .social-card {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: #0D0D0D;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            margin-bottom: 1rem;
+        }
+
+        .social-card:hover {
+            border-color: var(--bs-gray-700);
+            transform: translateY(-5px);
+        }
+
+        .social-title {
+            font-size: 1.25rem;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+
+        @keyframes holoGradient {
+            0% {
+                background-position: 0% 50%;
+                filter: hue-rotate(0deg) brightness(1);
+            }
+
+            25% {
+                filter: hue-rotate(90deg) brightness(1.1);
+            }
+
+            50% {
+                background-position: 100% 50%;
+                filter: hue-rotate(180deg) brightness(1);
+            }
+
+            75% {
+                filter: hue-rotate(270deg) brightness(0.9);
+            }
+
+            100% {
+                background-position: 0% 50%;
+                filter: hue-rotate(360deg) brightness(1);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: .2;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .holo-card {
+            position: relative;
+            background: #0D0D0D;
+        }
+
+        .holo-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg,
+                    #ff00ee 0%,
+                    #00ff00 20%,
+                    #00ffff 40%,
+                    #ff00ff 60%,
+                    #ff0000 80%,
+                    #ff00ee 100%);
+            background-size: 400% 400%;
+            animation: holoGradient 12s ease infinite;
+            z-index: 1;
+            opacity: 0.07;
+        }
+
+        .holo-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                    rgba(255, 255, 255, 0.1) 0%,
+                    transparent 50%);
+            background-size: 200% 200%;
+            z-index: 2;
+            animation: shimmer 3s infinite;
+            backdrop-filter: blur(5px);
+        }
+
+        @media (min-width: 992px) {
+            .navbar-nav {
+                margin-left: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sasha Yelisieiev</a>
+            <button class="navbar-toggler p-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#socials">Socials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacts.html">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ai-me.html">AI me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container socials-section">
+        <h2 class="text-center mb-4">Socials</h2>
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 row-cols-lg-5 g-4">
+            <div class="col">
+                <a href="https://www.linkedin.com/in/alex-yelisieiev-053079248/" target="_blank" class="social-card">
+                    <h3 class="social-title">LinkedIn</h3>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://github.com/sasha-yelisieiev" target="_blank" class="social-card">
+                    <h3 class="social-title">GitHub</h3>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://gitlab.com/alex.yelisieiev" target="_blank" class="social-card">
+                    <h3 class="social-title">GitLab</h3>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.instagram.com/sasha.yelisieiev/" target="_blank" class="social-card">
+                    <h3 class="social-title">Instagram</h3>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.threads.net/@sasha.yelisieiev" target="_blank" class="social-card holo-card">
+                    <h3 class="social-title">Threads</h3>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.facebook.com/sasha.yelisieiev/" target="_blank" class="social-card">
+                    <h3 class="social-title">Facebook</h3>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://medium.com/@sasha.yelisieiev" target="_blank" class="social-card">
+                    <h3 class="social-title">Medium</h3>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://www.chess.com/member/57pixels" target="_blank" class="social-card">
+                    <h3 class="social-title">Chess.com</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

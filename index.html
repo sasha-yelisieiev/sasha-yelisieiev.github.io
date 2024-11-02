@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark-theme" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sasha Yelisieiev - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+  <style>
+    :root {
+      --highlight-color: #86c9ff;
+      --bs-gray-100: #f8f9fa;
+      --bs-gray-200: #e9ecef;
+      --bs-gray-300: #dee2e6;
+      --bs-gray-400: #ced4da;
+      --bs-gray-500: #adb5bd;
+      --bs-gray-600: #6c757d;
+      --bs-gray-700: #495057;
+      --bs-gray-800: #343a40;
+      --bs-gray-900: #212529;
+    }
+
+    code {
+      color: var(--highlight-color);
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      font-family: monospace, sans-serif !important;
+      color: #fff;
+    }
+
+    body {
+      background-color: #0A0A0A;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding-top: 56px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+      background-color: #0A0A0A;
+    }
+
+    .navbar-toggler {
+      border: none;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      font-family: monospace;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+      display: none;
+    }
+
+    .navbar-toggler::before {
+      content: "[+]";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .navbar-toggler[aria-expanded="true"]::before {
+      content: "[-]";
+    }
+
+    .about-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .about-section .content {
+      text-align: justify;
+      max-width: 800px;
+    }
+
+    .about-section h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .posts-link {
+      text-align: center;
+      padding: 1rem;
+      font-family: monospace;
+      color: var(--bs-gray-500);
+    }
+
+    .posts-link>a {
+      text-decoration: none;
+      transition-duration: .15s;
+    }
+
+    .posts-link>a:hover {
+      color: var(--bs-gray-200);
+    }
+
+    .navbar-collapse {
+      transition: height 0.35s ease;
+    }
+
+    .navbar-collapse.collapsing {
+      height: 0;
+      overflow: hidden;
+    }
+
+    .navbar-collapse.show {
+      height: auto;
+    }
+
+    @media (min-width: 992px) {
+      .navbar-nav {
+        margin-left: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sasha Yelisieiev</a>
+      <button class="navbar-toggler p-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./socials.html">Socials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacts.html">Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ai-me.html">AI me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container about-section">
+    <section id="about" class="content">
+      <h2 class="mb-3">About</h2>
+      <p>A Python / Web developer, Software Engineering student, and the creator of the Tech Threads Mentors / Mentees
+        program with experience in <code>Python</code>, <code>Django</code>, <code>AI</code>, <code>Docker</code>,
+        <code>Databases</code>, <code>HTML5</code>, <code>CSS</code>, <code>Bootstrap</code>, <code>Git</code>,
+        <code>GitHub</code>, and with <code>Linux</code>.
+      </p>
+    </section>
+  </div>
+  <div class="posts-link mb-3 fixed-bottom">
+    <a href="https://www.threads.net/@sasha.yelisieiev"><small>[ checkout my posts ]</small></a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
