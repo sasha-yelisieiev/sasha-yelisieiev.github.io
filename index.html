@@ -46,11 +46,8 @@
       display: flex;
       flex-direction: column;
       padding-top: 56px;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+      /* Add padding bottom to prevent content from being hidden behind posts link */
+      padding-bottom: 60px;
     }
 
     nav {
@@ -94,11 +91,19 @@
       justify-content: center;
       align-items: center;
       padding: 2rem 1rem;
+      /* Add max width to container */
+      max-width: 100%;
+      margin: 0 auto;
     }
 
     .about-section .content {
       text-align: justify;
       max-width: 800px;
+      /* Add padding for mobile */
+      padding: 0 15px;
+      /* Ensure content doesn't overflow */
+      width: 100%;
+      word-wrap: break-word;
     }
 
     .about-section h2 {
@@ -111,28 +116,39 @@
       padding: 1rem;
       font-family: monospace;
       color: var(--bs-gray-500);
+      background-color: #0A0A0A;
+      /* Ensure posts link stays above content */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
 
     .posts-link>a {
       text-decoration: none;
       transition-duration: .15s;
+      color: var(--bs-gray-500);
     }
 
     .posts-link>a:hover {
       color: var(--bs-gray-200);
     }
 
-    .navbar-collapse {
-      transition: height 0.35s ease;
-    }
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      .about-section .content {
+        padding: 0 20px;
+      }
 
-    .navbar-collapse.collapsing {
-      height: 0;
-      overflow: hidden;
-    }
+      p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
 
-    .navbar-collapse.show {
-      height: auto;
+      code {
+        word-break: break-word;
+      }
     }
 
     @media (min-width: 992px) {
@@ -172,6 +188,7 @@
       </div>
     </div>
   </nav>
+
   <div class="container about-section">
     <section id="about" class="content">
       <h2 class="mb-3">About</h2>
@@ -182,9 +199,11 @@
       </p>
     </section>
   </div>
-  <div class="posts-link mb-3 fixed-bottom">
+
+  <div class="posts-link">
     <a href="https://www.threads.net/@sasha.yelisieiev"><small>[ checkout my posts ]</small></a>
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 

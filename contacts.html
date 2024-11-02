@@ -95,6 +95,8 @@
             text-align: justify;
             max-width: 800px;
             width: 100%;
+            /* Add padding for mobile */
+            padding: 0 15px;
         }
 
         .contacts-section h2 {
@@ -105,6 +107,8 @@
         .contact-list {
             list-style: none;
             padding: 0;
+            /* Ensure list items don't overflow */
+            width: 100%;
         }
 
         .contact-item {
@@ -113,6 +117,9 @@
             margin-bottom: 1rem;
             padding: 1.5rem;
             transition: transform 0.2s ease, border-color 0.2s ease;
+            /* Ensure content doesn't overflow */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .contact-item:hover {
@@ -129,6 +136,8 @@
         .contact-value {
             font-size: 1.1rem;
             color: #fff;
+            /* Ensure long values wrap properly */
+            word-break: break-word;
         }
 
         .contact-value a {
@@ -146,6 +155,21 @@
             color: var(--bs-gray-600);
             margin-top: 0.5rem;
             font-style: italic;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .contacts-section .content {
+                padding: 0 20px;
+            }
+
+            .contact-item {
+                padding: 1rem;
+            }
+
+            .contact-value {
+                font-size: 1rem;
+            }
         }
 
         @media (min-width: 992px) {
